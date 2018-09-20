@@ -79,6 +79,14 @@ button{
 }
 
 ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: purple;
+}
+.navbar{
     position: fixed;
     list-style-type: none;
     margin: 0;
