@@ -5,6 +5,12 @@ h1{
     border: 1px solid purple;
     text-align: center;
 }
+h2{
+    color:#36454f;
+}
+h3{
+    color:#36454f;
+}
 a {
     color: #0060B6;
     text-decoration: none;
