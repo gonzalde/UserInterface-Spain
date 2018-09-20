@@ -23,6 +23,7 @@ button{
 @media screen and (min-width: 1000px){
     .row{
         display: flex;
+        padding-top: 50px;
     }
     .column1{
         border: 4px dashed purple;
@@ -54,6 +55,20 @@ button{
 .column2 *{
     margin: 10px 10px;
 }
+
+.opinion{
+    border: 3px solid lightgray;
+    background-color: white;
+}
+
+.opinon-content{
+    background-color: white;
+}
+
+.opinion-logo{
+    height: auto;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -87,7 +102,7 @@ li a:hover {
     display: inline;
 } 
 .footer{
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
