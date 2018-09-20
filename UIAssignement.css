@@ -20,9 +20,10 @@ button{
    vertical-align: middle;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 950px){
     .row{
         display: flex;
+        padding-top: 50px;
     }
     .column1{
         border: 4px dashed purple;
@@ -36,7 +37,10 @@ button{
         margin: 10px 10px;
     }
 }
-@media screen and (max-width:999px){
+@media screen and (max-width:949px){
+    .row{
+        padding-top: 50px;
+    }
     .column1{
         border: 4px dashed purple;
         margin: 10px 10px;
@@ -55,6 +59,7 @@ button{
     margin: 10px 10px;
 }
 ul {
+    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -87,7 +92,7 @@ li a:hover {
     display: inline;
 } 
 .footer{
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -98,6 +103,9 @@ li a:hover {
     width: 50px;
     height: auto;
     vertical-align: middle;
+}
+input{
+    height: 30px;
 }
 .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -111,3 +119,18 @@ li a:hover {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+.circle{
+    border: 2px solid teal;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+button:hover{
+    background-color: teal;
+    color: white;
+}
+button:focus{
+    outline: 0;
+}
