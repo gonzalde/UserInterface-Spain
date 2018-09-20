@@ -5,6 +5,12 @@ h1{
     border: 1px solid purple;
     text-align: center;
 }
+h2{
+    color:#36454f;
+}
+h3{
+    color:#36454f;
+}
 a {
     color: #0060B6;
     text-decoration: none;
@@ -58,6 +64,20 @@ button{
 .column2 *{
     margin: 10px 10px;
 }
+
+.opinion{
+    border: 3px solid lightgray;
+    background-color: white;
+}
+
+.opinon-content{
+    background-color: white;
+}
+
+.opinion-logo{
+    height: auto;
+}
+
 ul {
     position: fixed;
     list-style-type: none;
