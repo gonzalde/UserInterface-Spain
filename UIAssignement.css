@@ -260,7 +260,7 @@ li a:hover {
     bottom: 0;
     text-align: center;
     width: 100%;
-    height: 5%;
+    height: 7%;
 }
 
 .bottom-navbar a {
@@ -271,7 +271,10 @@ li a:hover {
     vertical-align: middle;
     left: 50%;
 }
-
+.bottom-navbar a img{
+    width: 30px;
+    margin-top: 10px;
+}
 
 input{
     height: 30px;
