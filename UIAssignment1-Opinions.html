@@ -7,12 +7,15 @@
       rel="stylesheet">
   </head>
   <body>
-    <ul class = "col-12 navbar">
-      <li><img class="logo" src="logo.png" alt=""></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
+    <div class="col-12 header-navbar">
+      <img class="logo" src="logo.png" alt="logo">
+      <h2>The Restraunteur</h2>
+      <ul class="navbar-links">
+        <li><a href="UIAssignment1-Personal.html">Personal</a></li>
+        <li><a href="UIAssignment1-Opinions.html">Opinions</a></li>
+        <li><a href="#">Preferences</a></li>
+      </ul>
+    </div>
 
     <div class="row">
       <div class="column1">
@@ -41,11 +44,18 @@
         <p class="Preferences">Spanish &#10005;</p>
       </div>
 
+
+      <div class="mobile-username-group">
+        <img class="headshot" src="headshot.png" alt="">
+        <h2 style="display: inline">Thomas Kaizer</h2>
+      </div>
+
       <div class="column2">
         <h2>Last Opinions</h2>
         <div class="opinion">
           <ul class="opinon-content">
-            <li> <img class="opinion-logo col-7" src="ginos-logo.png"
+            <li> <img style="margin-top: 30px"
+                class="opinion-logo col-7" src="ginos-logo.png"
                 alt="Gino's">
             </li>
             <li>
@@ -54,7 +64,8 @@
               <h4>19, September, 2018</h4>
             </li>
           </ul>
-          <p>Gino's is great for family dinners, they have an amazing 2 for 1
+          <p class="opinion-desc">Gino's is great for family dinners, they have
+            an amazing 2 for 1
             deal from Sunday to Thursday. The pizza's are thin and crispy
             perfect for anyone.</p>
         </div>
@@ -69,7 +80,8 @@
               <h4>10, September, 2018</h4>
             </li>
           </ul>
-          <p>I had an amazing dinner there with 3 friends. The dinner menu had
+          <p class="opinion-desc">I had an amazing dinner there with 3 friends.
+            The dinner menu had
             several
             options, all of which were well priced and decent portion size. I
             went to the one in Chamberi, it had a nice atmosphere that felt like
@@ -77,6 +89,13 @@
         </div>
       </div>
     </div>
+
+    <div class="bottom-navbar">
+      <a href="UIAssignment1-Personal.html">personal</a>
+      <a href="UIAssignment1-Opinions.html" class="active">opinions</a>
+      <a href="#">preferences</a>
+    </div>
+
     <div class="footer">
       <a href="http://www.facebook.com">facebook</a>
       <a href="http://www.google.com">google</a>
