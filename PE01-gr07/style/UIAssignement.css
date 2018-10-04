@@ -1,5 +1,5 @@
 *{
-    font-family: 'Noto Serif KR', sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 html, body {
     margin: 0;
@@ -11,19 +11,19 @@ h1{
     text-align: center;
 }
 h2{
-    color:#36454f;
+    color:#696969;
 }
 h3{
-    color:#36454f;
+    color:#696969;
 }
 a {
-    color: #0060B6;
+    color:slategrey;
     text-decoration: none;
     float: inherit;
 }
 a:hover 
 {
-     color:#00A0C6; 
+     color:black; 
      text-decoration:none; 
      cursor:pointer;  
 }
@@ -226,7 +226,8 @@ li a{
     text-decoration: none;
 }
 li a:hover {
-    background-color: magenta;
+    background-color: white;
+    opacity: 0.3;
 }
 
 .logo{
@@ -250,6 +251,7 @@ li a:hover {
 .headshot{
     width: 50px;
     height: auto;
+    border-radius: 5%;
     vertical-align: middle;
 }
 
@@ -274,6 +276,10 @@ li a:hover {
 .bottom-navbar a img{
     width: 30px;
     margin-top: 10px;
+}
+
+.navbar-icon{
+    width:35px;
 }
 
 input{

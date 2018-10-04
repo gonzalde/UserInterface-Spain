@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Assignment 1</title>
-        <link rel="stylesheet" href="UIAssignement.css">
+        <meta charset="utf-8"/>
+        <title>Personal Information</title>
+        <link rel="stylesheet" href="style/UIAssignement.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR"
             rel="stylesheet">
     </head>
     <body>
 
         <div class="col-12 header-navbar">
-            <img class="logo" src="logo.png" alt="logo">
+            <img class="logo" src="images/logo.png" alt="logo">
             <h2><a style="color:white" href="UIAssignment1.html">The
                     Restraunteur</a></h2>
             <ul class="navbar-links">
@@ -27,9 +28,10 @@
             </ul>
         </div>
 
+
         <div class="row">
             <div class="column1">
-                <img class="headshot" src="headshot.png" alt="">
+                <img class="headshot" src="images/headshot.png" alt="">
                 <h2 style="display: inline">Thomas Kaizer</h2>
                 <h3><a href="UIAssignment1-Personal.html" style="margin-left:
                         0px">Personal Information</a></h3>
@@ -56,51 +58,45 @@
                 <p class="Preferences">Spanish &#10005;</p>
             </div>
 
+            <div class="mobile-username-group">
+                <img class="headshot" src="headshot.png" alt="">
+                <h2 style="display: inline">Thomas Kaizer</h2>
+            </div>
+
             <div class="column2">
-                <div class = "opinions">
-                    <ul class="opinon-content">
-                        <li> <img class="opinion-logo col-8" src="alcaravea-logo.png"
-                            alt="Alcaravea">
-                        </li>
-                        <li>
-                          <h3>Alcaravea</h3>
-                          <h4>Madrid, Spain</h4>
-                          <h4>10, September, 2018</h4>
-                        </li>
-                      </ul>
-                      <p class="opinion-desc">I had an amazing dinner there with 3 friends.
-                        The dinner menu had
-                        several
-                        options, all of which were well priced and decent portion size. I
-                        went to the one in Chamberi, it had a nice atmosphere that felt like
-                        home. Recommended for anyone who wants to enjoy a great time.</p>
-                </div>
+                <h2>Personal Information</h2>
+                <input class="col-4" type="text" placeholder="Name">
+                <input style="display:inline" class="col-4" type="text"
+                    placeholder="Surname">
+                <input style="width: 70.5%" class="col-9" type="text"
+                    placeholder="email">
+                <input class="col-4" type="text" placeholder="address">
+                <input style="display:inline" class="col-4" type="text"
+                    placeholder="mobile phone">
+                <input style="width: 70.5%" class="col-9" type="text"
+                    placeholder="birthday">
 
-                <div class="personal">
-                    <h2>Personal Information</h2>
-                    <input class = "col-4" type="text" placeholder="Name">
-                    <input style="display:inline" class = "col-4" type="text" placeholder="Surname">
-                    <input style = "width: 70.5%"class = "col-9" type="text" placeholder="email">
-                    <input class = "col-4" type="text" placeholder="address">
-                    <input style="display:inline" class = "col-4" type="text" placeholder="mobile phone">
-                    <input style = "width: 70.5%"class = "col-9" type="text" placeholder="birthday">
-
-                    <br>
-
-                    <div class = "circles">
-                        <button class = "circle" style = "font-size: 16pt">X Points</button>
-                        <button class = "circle" style = "font-size: 16pt">2 Level</button>
-                        <button class = "circle" style = "font-size: 16pt">3 Opinions</button>
-                        <button class = "circle" style = "font-size: 16pt">5 Photos</button>
-                    </div>
+                <br>
+                <h2>My Activity in this App</h2>
+                <div class="circles">
+                    <button class="circle" style="font-size: 16pt">X Points</button>
+                    <button class="circle" style="font-size: 16pt">2 Level</button>
+                    <button class="circle" style="font-size: 16pt">3 Opinions</button>
+                    <button class="circle" style="font-size: 16pt">5 Photos</button>
                 </div>
             </div>
         </div>
+
+        <div class="bottom-navbar">
+            <a href="UIAssignment1-Personal.html">personal</a>
+            <a href="UIAssignment1-Opinions.html" class="active">opinions</a>
+            <a href="#">preferences</a>
+        </div>
+
         <div class="footer">
             <a href="http://www.facebook.com">facebook</a>
             <a href="http://www.google.com">google</a>
             <a href="http://www.wikipedia.com">wikipedia</a>
         </div>
     </body>
-    <script src="UI-assignment.js"></script>
 </html>
