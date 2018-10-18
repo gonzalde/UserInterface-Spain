@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>The Restraunteur</title>
+        <link rel="stylesheet" href="style/UIAssignement.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR"
+            rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+            <div id ="body">
+
+        <div class="col-12 header-navbar">
+            <img class="logo" src="images/logo.png" alt="logo">
+            <h2><a style="color:white" href="UIAssignment2.html">The
+                    Restraunteur</a></h2>
+            <ul class="navbar-links">
+                <li><a onclick="personalInfo()">Personal</a></li>
+                <li><a onclick="getOpinions()">Opinions</a></li>
+                <li><a href="#">Preferences</a></li>
+                <li onclick="restart()" id = "logOut" style = "margin-left: 500px" ><a>Log Out</a></li>
+            </ul>
+        </div>
+
+        <div class="tablet-navbar">
+            <ul class="col-12 tablet-navbar-links">
+                <li><a onclick="personalInfo()"">Personal</a></li>
+                <li><a onclick="getOpinions()">Opinions</a></li>
+                <li><a href="#">Preferences</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+
+            <!-- Side Panel Information: Web -->
+            <div class="column1">
+                <img class="headshot" src="images/headshot.png" alt="">
+                <h2 style="display: inline">Thomas Kaizer</h2>
+                <h3><a style="margin-left:0px" onclick="personalInfo()">Personal
+                        Information</a></h3>
+                <p>Thomas Kaizer is from Westchester, New York, and is a student
+                    at the University of Rochester. He is currently studying
+                    abroad in Madrid.</p>
+
+                <hr>
+
+                <h3><a onclick="getOpinions()" style="margin-left:
+                        0px">Last Opinions</a></h3>
+                <a href="http://casalucio.es/es/">Casa Lucio</a>
+                <p>2 and a half stars lol</p>
+                <a href="http://www.botin.es/en">Botín</a>
+                <p>Pretty old</p>
+                <a href="http://alcaravea.com/">Alcaravea</a>
+                <p>Pretty big dishes</p>
+
+                <hr>
+
+                <h3>Preferences &#9998;</h3>
+                <p class="Preferences">Italian &#10005;</p>
+                <p class="Preferences">Chinese &#10005;</p>
+                <p class="Preferences">Spanish &#10005;</p>
+            </div>
+
+            <div class="column2" id="blank-column">
+                <p></p>
+            </div>
+
+             <!-- Side Panel Information: Mobile -->
+            <div class="mobile-username-group">
+                    <img class="headshot" src="images/headshot.png" alt="">
+                    <h2 style="display: inline">Thomas Kaizer</h2>
+                </div>
+
+            <!-- Personal Information Window -->
+            <div class="column2" id ="personal-info" style="display:none">
+                <h2>Personal Information</h2>
+                <input class="col-4" type="text" placeholder="Name">
+                <input style="display:inline" class="col-4" type="text"
+                    placeholder="Surname">
+                <input style="width: 70.5%" class="col-9" type="text"
+                    placeholder="email">
+                <input class="col-4" type="text" placeholder="address">
+                <input style="display:inline" class="col-4" type="text"
+                    placeholder="mobile phone">
+                <input style="width: 70.5%" class="col-9" type="text"
+                    placeholder="birthday">
+
+                <br>
+                <h2>My Activity in this App</h2>
+                <div class="circles">
+                    <button class="circle" style="font-size: 16pt">X Points</button>
+                    <button class="circle" style="font-size: 16pt">2 Level</button>
+                    <button class="circle" style="font-size: 16pt">3 Opinions</button>
+                    <button class="circle" style="font-size: 16pt">5 Photos</button>
+                </div>
+            </div>
+
+        <!-- Opinion List Window -->
+        <div class="column2" id="opinion-list" style="display:none">
+                <h2>Last Opinions</h2>
+                <div class="opinion">
+                  <ul class="opinon-content">
+                    <li> <img style="margin-top: 30px"
+                        class="opinion-logo col-7" src="images/ginos-logo.png"
+                        alt="Gino's">
+                    </li>
+                    <li>
+                      <h3>Gino's</h3>
+                      <h4>Madrid, Spain</h4>
+                      <h4>19, September, 2018</h4>
+                    </li>
+                  </ul>
+                  <p class="opinion-desc">Gino's is great for family dinners, they have
+                    an amazing 2 for 1
+                    deal from Sunday to Thursday. The pizza's are thin and crispy
+                    perfect for anyone.</p>
+                </div>
+                <div class="opinion">
+                  <ul class="opinon-content">
+                    <li> <img class="opinion-logo col-8" src="images/alcaravea-logo.png"
+                        alt="Alcaravea">
+                    </li>
+                    <li>
+                      <h3>Alcaravea</h3>
+                      <h4>Madrid, Spain</h4>
+                      <h4>10, September, 2018</h4>
+                    </li>
+                  </ul>
+                  <p class="opinion-desc">I had an amazing dinner there with 3 friends.
+                    The dinner menu had
+                    several
+                    options, all of which were well priced and decent portion size. I
+                    went to the one in Chamberi, it had a nice atmosphere that felt like
+                    home. Recommended for anyone who wants to enjoy a great time.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="footer">
+            <a href="http://www.facebook.com">facebook</a>
+            <a href="http://www.google.com">google</a>
+            <a href="http://www.wikipedia.com">wikipedia</a>
+        </div>
+    </div>
+        <!-- Login Information -->
+        <div id = "entrance" class = "hidden">
+                <h1 class = "titleHead">The Restraunteur</h1>
+    
+                <div id = "logIn">
+                    <input type="text" name = "email"placeholder="email" style = "width: 20%">
+                    <br>
+                    <input type="password" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
+                    <br>
+                    <br>
+                    <button  type = "submit" class = "signInButton">Log In</button>
+                    <button onclick = "register()" class = "signInButton">Register</button>
+                </div>
+    
+                <div id = "Register" class = "hidden">
+                        <input type="text" placeholder="User Name" style = "width: 20%">
+                        <br>
+                        <input type="password" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
+                        <br>
+                        <input type="text" placeholder="Fist Name" style = "width: 20%">
+                        <br>
+                        <input type="text" placeholder="Last Name" style = "width: 20%">
+                        <br>
+                        <input type="text" name = "email"placeholder="email" style = "width: 20%">
+                        <br>
+                        <input type = "date" style = "width: 20%">
+                        <br>
+                        <input type="file" name="pic" accept="image/*">
+                        <br>
+                        <input type="text" name="address" placeholder="Address" style = "width: 20%">
+                        <br>
+                        <button type = "submit" onclick="saveCookies()">Submit</button>
+                </div>
+            </div>
+
+    </body>
+    <script src="js/UIAssignment2.js"></script>
+
+</html>
