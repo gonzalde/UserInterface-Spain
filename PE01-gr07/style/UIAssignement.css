@@ -140,6 +140,9 @@ button{
     .opinion-desc{
         display: none;
     }
+
+    
+
     .footer{
         display:none;
     }
@@ -312,4 +315,7 @@ button:hover{
 }
 button:focus{
     outline: 0;
+}
+.hidden{
+    display: none
 }

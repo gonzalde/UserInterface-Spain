@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style/UIAssignement.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR"
             rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
 
@@ -14,9 +15,10 @@
             <h2><a style="color:white" href="UIAssignment1.html">The
                     Restraunteur</a></h2>
             <ul class="navbar-links">
-                <li><a href="UIAssignment1-Personal.html">Personal</a></li>
-                <li><a href="UIAssignment1-Opinions.html">Opinions</a></li>
-                <li><a href="#">Preferences</a></li>
+                <li id = "personalButton"><a href="">Personal</a></li>
+                <li id = "opinionsButton"><a href="">Opinions</a></li>
+                <li id = "preferencesButton"><a href="#">Preferences</a></li>
+                <li id = "logOut" style = "margin-left: 500px"><a>Log Out</a></li>
             </ul>
         </div>
 
@@ -58,9 +60,9 @@
             </div>
 
             <div class="column2">
-                <div class = "opinions">
+                <div id = "opinionsTab" class = "hidden">
                     <ul class="opinon-content">
-                        <li> <img class="opinion-logo col-8" src="alcaravea-logo.png"
+                        <li> <img class="opinion-logo col-8" src="images/alcaravea-logo.png"
                             alt="Alcaravea">
                         </li>
                         <li>
@@ -77,7 +79,7 @@
                         home. Recommended for anyone who wants to enjoy a great time.</p>
                 </div>
 
-                <div class="personal">
+                <div id="personalTab" class = "hidden">
                     <h2>Personal Information</h2>
                     <input class = "col-4" type="text" placeholder="Name">
                     <input style="display:inline" class = "col-4" type="text" placeholder="Surname">
