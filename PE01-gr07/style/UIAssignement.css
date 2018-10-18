@@ -244,7 +244,7 @@ li a:hover {
     display: inline;
 } 
 .footer{
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -318,4 +318,22 @@ button:focus{
 }
 .hidden{
     display: none
+}
+.titleHead{
+    text-align: center;
+    margin-top: 8%;
+    border: none;
+    font-size: 40pt;
+    color: purple;
+}
+#entrance{
+    text-align: center;
+}
+.signInButton{
+    width: 70px;
+    height: 40px;
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+    background-color: purple;
+    color: white;
 }
