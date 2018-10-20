@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style/UIAssignement.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR"
             rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
@@ -56,10 +57,8 @@
 
                 <hr>
 
-                <h3>Preferences &#9998;</h3>
-                <p class="Preferences">Italian &#10005;</p>
-                <p class="Preferences">Chinese &#10005;</p>
-                <p class="Preferences">Spanish &#10005;</p>
+                <h3>Preferences <i class="fa fa-plus" id = "editButton" onclick="addPreference()"></i></h3>
+                <div class="pref-list"></div>
             </div>
 
             <div class="column2" id="blank-column">

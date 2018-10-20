@@ -30,3 +30,31 @@ function register(){
     document.getElementById("logIn").classList.add("hidden");
     document.getElementById("Register").classList.remove("hidden");
 }
+
+// Handles the preferences
+var prefCounter = 0;
+function addPreference(){
+    if(!checkPreferences()){
+        window.alert("All preferences need to be filled.")
+        return;
+    }
+    var tagName = "pref_"+prefCounter;
+    prefCounter++;
+    $(".pref-list").append("<div id=\""+tagName+"\" class=\"Preferences\"><b contenteditable=\"true\">Add Preference</b><i class=\"fa fa-times\" onclick=\"removePreference("+tagName+")\"></i></div>");
+}
+
+// Removes preferences
+function removePreference(idTag){
+    $("#"+idTag.id).remove();
+}
+
+// Checks if their are valid preferences
+function checkPreferences(){
+    for(var i=0;i<prefCounter;++i){
+        var text = $("#pref_"+i).text();
+        if(text=="Add Preference"){
+            return false;
+        }
+    }
+    return true;
+}

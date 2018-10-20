@@ -239,9 +239,9 @@ li a:hover {
 }
 
 .Preferences{
-    padding: 5px 5px;
+    padding: 1px 1px;
     border: 1px solid black;
-    display: inline;
+    display: inline-block;
 } 
 .footer{
     position: fixed;
