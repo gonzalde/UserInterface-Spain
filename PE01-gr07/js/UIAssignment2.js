@@ -1,137 +1,127 @@
 
 // Switches to personal information panel.
-function personalInfo(){
+function personalInfo() {
     document.title = "The Restraunteur - Personal Information";
     var column2 = document.getElementsByClassName("column2");
-    for(var i=0;i<column2.length;++i){
-        column2[i].style.display="none";
+    for (var i = 0; i < column2.length; ++i) {
+        column2[i].style.display = "none";
     }
     var pInfo = document.getElementById("personal-info");
     pInfo.style.display = "block";
 }
 
 // Switches to opinions panel.
-function getOpinions(){
+function getOpinions() {
     document.title = "The Restraunteur - Opinions";
     var column2 = document.getElementsByClassName("column2");
-    for(var i=0;i<column2.length;++i){
-        column2[i].style.display="none";
+    for (var i = 0; i < column2.length; ++i) {
+        column2[i].style.display = "none";
     }
     var opinonList = document.getElementById("opinion-list");
     opinonList.style.display = "block";
 }
 
 // Performs log out.
-function restart(){
+function restart() {
     var content = document.getElementById("body");
     content.classList.add("hidden");
     document.getElementById("entrance").classList.remove("hidden");
 }
 
 // Registration.
-function register(){
+function register() {
     document.getElementById("logIn").classList.add("hidden");
     document.getElementById("Register").classList.remove("hidden");
 }
 
 // Handles the preferences
 var prefCounter = 0;
-function addPreference(){
-    if(!checkPreferences()){
+function addPreference() {
+    if (!checkPreferences()) {
         window.alert("All preferences need to be filled.")
         return;
     }
-    var tagName = "pref_"+prefCounter;
+    var tagName = "pref_" + prefCounter;
     prefCounter++;
-    $(".pref-list").append("<div id=\""+tagName+"\" class=\"Preferences\"><b contenteditable=\"true\">Add Preference</b><i class=\"fa fa-times\" onclick=\"removePreference("+tagName+")\"></i></div>");
+    $(".pref-list").append("<div id=\"" + tagName + "\" class=\"Preferences\"><b contenteditable=\"true\">Add Preference</b><i class=\"fa fa-times\" onclick=\"removePreference(" + tagName + ")\"></i></div>");
 }
 
 // Removes preferences
-function removePreference(idTag){
-    $("#"+idTag.id).remove();
+function removePreference(idTag) {
+    $("#" + idTag.id).remove();
 }
 
 // Checks if their are valid preferences
-function checkPreferences(){
-    for(var i=0;i<prefCounter;++i){
-        var text = $("#pref_"+i).text();
-        if(text=="Add Preference"){
+function checkPreferences() {
+    for (var i = 0; i < prefCounter; ++i) {
+        var text = $("#pref_" + i).text();
+        if (text == "Add Preference") {
             return false;
         }
     }
     return true;
 }
 
+// Restraunt info keyed keyed by number.
 var restrauntInfo = [
-    {   name : 'Gino\'s', 
-        address: 'Glorieta de Quevedo, 8, 28015 Madrid', 
+    {
+        name: 'Gino\'s',
+        address: 'Glorieta de Quevedo, 8, 28015 Madrid',
         website: 'ginos.es',
-        number: '912 75 92 11',
-        description: '',
+        image: 'images/ginos-logo.png',
+        number: '912759211',
+        description: 'En Ginos preparamos auténtica comida italiana con ingredientes frescos cocinados al momento, para ofrecerte los mejores platos italianos artesanales.',
         foodType: 'Pizza, Pasta, and Italian Plates',
-        priceRange:'$-$$',
-        facebook:'https://www.facebook.com/Ginos/',
+        priceRange: '$-$$',
+        review: 'Ginos is great for family dinners, they have an amazing 2 for 1 deal from Sunday to Thursday. The pizza\'s are thin and crispy perfect for anyone.',
+        facebook: 'https://www.facebook.com/Ginos/',
         twitter: 'https://twitter.com/ginosristorante'
+    },
+    {
+        name: 'Alcaravea',
+        address: 'Calle de Cea Bermúdez, 38, 28003 Madrid',
+        website: 'http://alcaravea.com/',
+        image: 'images/alcaravea-logo.png',
+        number: '915336932',
+        description: 'La cocina tradicional y de mercado es nuestra esencia. El mejor condimento: una pizca de renovación.',
+        foodType: 'Spanish Home Cuisine, Great Cocktails',
+        priceRange: '$$-$$$',
+        review: 'I had an amazing dinner there with 3 friends. The dinner menu had several' +
+            'options, all of which were well priced and decent portion size. I' +
+            'went to the one in Chamberi, it had a nice atmosphere that felt like' +
+            'home. Recommended for anyone who wants to enjoy a great time.',
+        facebook: 'https://www.facebook.com/enalcaravea/?rf=696324553733969',
+        twitter: 'https://twitter.com/enalcaravea'
     }];
 
-function getPopupInformation(){
+function getPopupInformation(restrauntId) {
+    var r = restrauntInfo.filter(r => r.number == restrauntId)[0];
+    var rClass = "popup-" + restrauntId;
+    var rHide = "hidePopupInformation(\"" + rClass + "\")";
+    $(".opinion-popup-content").append("<i class=\"" + rClass + " fa fa-times\" onclick=" + rHide + "></i>");
+    $(".opinion-popup-content").append("<ul class=\"" + rClass + "\" id=\"rContent\"></ul>");
+    // Add image
+    $("#rContent").append("<li> <img class=\"opinion-logo col-8\" src=\"" + r.image + "\" alt=\"" + r.name + "\"></li>");
+    // Add Information
+    $("#rContent").append("<li><h3>" + r.name + "</h3><h4>Phone #: " + r.number + "</h4><h4>Price Range: " + r.priceRange + "</h4><h4>Food Type:" + r.foodType + "</h4><h4>Address: " + r.address + "</h4></li>");
+    $(".opinion-popup-content").append("<li class=\"" + rClass + "\" >" + r.description + "</li>");
+    $(".opinion-popup-content").append("<li class=\"" + rClass + "\" ></li>");
+    $(".opinion-popup-content").append("<li class=\"" + rClass + "\" ><h4>Review: </h4><p>" + r.review + "</p></li>");
 
+    // Remove bullet points
+    $("#rContent").css("list-style-type", "none");
     $(".opinion-popup").show();
 }
 
-function hidePopupInformation(){
+function hidePopupInformation(restrauntId) {
+    $("." + restrauntId).remove();
     $(".opinion-popup").hide();
 
 }
-    //Registration and cookie saving functions
-// var today = new Date();
-// var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-
-// function saveCookies(){
-//     var userName = $('#rUserName').val();
-//     var password = $('#rPassword').val();
-//     var first = $('#rFirst').val();
-//     var last = $('#rLast').val();
-//     var email = $('#rEmail').val();
-//     var dob = $('#dob').val();
-//     var proPic = $('#proPic').val();
-//     var address = $('#address').val();
-
-//    var cookie = [password, first, last, email, dob, proPic, address];
-   
-//    $.cookie = (userName , cookie.join('|'));
-//    alert($.cookie(userName))
-// }
-
-// // function getCookie(cname) {
-// //     var name = cname + "=";
-// //     var decodedCookie = decodeURIComponent(document.cookie);
-// //     var ca = decodedCookie.split(';');
-// //     for(var i = 0; i <ca.length; i++) {
-// //         var c = ca[i];
-// //         while (c.charAt(0) == ' ') {
-// //             c = c.substring(1);
-// //         }
-// //         if (c.indexOf(name) == 0) {
-// //             return c.substring(name.length, c.length);
-// //         }
-// //     }
-// //     return "";
-// // }
-
-// function checkCookies(){
-//     var userName = $.cookie($('#rUserName').val());
-//     if(userName !== undefined){
-//         alert("account with this username already exists");
-//     }
-//     else{
-//         saveCookies();
-//     }
-// }
 
 document.getElementById("saveCookies").addEventListener('click', checkCookie);
 
-function createCookies(evt){
+function createCookies(evt) {
     evt.preventDefault();
 
     setCookie('username', document.getElementById('rUserName').value);
@@ -147,17 +137,17 @@ function createCookies(evt){
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
+        while (c.charAt(0) == ' ') c = c.substring(1);
         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
     return "";

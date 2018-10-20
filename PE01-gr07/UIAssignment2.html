@@ -50,12 +50,10 @@
 
                 <h3><a onclick="getOpinions()" style="margin-left:
                         0px">Last Opinions</a></h3>
-                <a href="http://casalucio.es/es/">Casa Lucio</a>
-                <p>2 and a half stars lol</p>
-                <a href="http://www.botin.es/en">Botín</a>
-                <p>Pretty old</p>
-                <a href="http://alcaravea.com/">Alcaravea</a>
-                <p>Pretty big dishes</p>
+                <a id="912759211" onclick="getPopupInformation(id)">Ginos</a>
+                <p>Gino's is great for family</p>
+                <a id="915336932" onclick="getPopupInformation(id)">Alcaravea</a>
+                <p>I had an amazing dinner.</p>
 
                 <hr>
 
@@ -107,7 +105,7 @@
                         alt="Gino's">
                     </li>
                     <li>
-                      <h3 onclick="getPopupInformation()">Gino's</h3>
+                      <h3 id="912759211" onclick="getPopupInformation(id)">Gino's</h3>
                       <h4>Madrid, Spain</h4>
                       <h4>19, September, 2018</h4>
                     </li>
@@ -123,7 +121,7 @@
                         alt="Alcaravea">
                     </li>
                     <li>
-                      <h3>Alcaravea</h3>
+                      <h3 id="915336932" onclick="getPopupInformation(id)">Alcaravea</h3>
                       <h4>Madrid, Spain</h4>
                       <h4>10, September, 2018</h4>
                     </li>
@@ -143,7 +141,6 @@
         <div class="opinion-popup">
             <!-- Opinon content -->
             <div class="opinion-popup-content">
-            <i onclick="hidePopupInformation()" class="fa fa-times"></i>
             </div>
         </div>
 
