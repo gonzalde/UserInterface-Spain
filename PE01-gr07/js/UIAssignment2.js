@@ -1,3 +1,5 @@
+
+// Switches to personal information panel.
 function personalInfo(){
     document.title = "The Restraunteur - Personal Information";
     var column2 = document.getElementsByClassName("column2");
@@ -8,6 +10,7 @@ function personalInfo(){
     pInfo.style.display = "block";
 }
 
+// Switches to opinions panel.
 function getOpinions(){
     document.title = "The Restraunteur - Opinions";
     var column2 = document.getElementsByClassName("column2");
@@ -57,4 +60,25 @@ function checkPreferences(){
         }
     }
     return true;
+}
+
+var restrauntInfo = [
+    {   name : 'Gino\'s', 
+        address: 'Glorieta de Quevedo, 8, 28015 Madrid', 
+        website: 'ginos.es',
+        number: '912 75 92 11',
+        description: '',
+        foodType: 'Pizza, Pasta, and Italian Plates',
+        priceRange:'$-$$',
+        facebook:'https://www.facebook.com/Ginos/',
+        twitter: 'https://twitter.com/ginosristorante'
+    }];
+
+function getPopupInformation(){
+
+    $(".opinion-popup").show();
+}
+
+function hidePopupInformation(){
+    $(".opinion-popup").hide();
 }
