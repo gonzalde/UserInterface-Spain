@@ -60,47 +60,90 @@ function checkPreferences(){
 }
 
 //Registration and cookie saving functions
-var today = new Date();
-var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+// var today = new Date();
+// var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
 
-function saveCookies(){
-    var userName = $('rUserName').val();
-    alert(userName);
-    var password = $('rPassword').val();
-    var first = $('rFirst').val();
-    var last = $('rLast').val();
-    var email = $('rEmail').val();
-    var dob = $('dob').val();
-    var proPic = $('proPic').val();
-    var address = $('address').val();
+// function saveCookies(){
+//     var userName = $('#rUserName').val();
+//     var password = $('#rPassword').val();
+//     var first = $('#rFirst').val();
+//     var last = $('#rLast').val();
+//     var email = $('#rEmail').val();
+//     var dob = $('#dob').val();
+//     var proPic = $('#proPic').val();
+//     var address = $('#address').val();
 
-   $.cookie = ("theName" , [password, first, last, email, dob, proPic, address])
-}
-
-// function getCookie(cname) {
-//     var name = cname + "=";
-//     var decodedCookie = decodeURIComponent(document.cookie);
-//     var ca = decodedCookie.split(';');
-//     for(var i = 0; i <ca.length; i++) {
-//         var c = ca[i];
-//         while (c.charAt(0) == ' ') {
-//             c = c.substring(1);
-//         }
-//         if (c.indexOf(name) == 0) {
-//             return c.substring(name.length, c.length);
-//         }
-//     }
-//     return "";
+//    var cookie = [password, first, last, email, dob, proPic, address];
+   
+//    $.cookie = (userName , cookie.join('|'));
+//    alert($.cookie(userName))
 // }
 
-function checkCookies(){
-    var userName = $.cookie($("theName"));
-    alert(userName);
-    if(userName !== ""){
-        alert("account with this username already exists");
-    }
-    else{
-        saveCookies();
-    }
+// // function getCookie(cname) {
+// //     var name = cname + "=";
+// //     var decodedCookie = decodeURIComponent(document.cookie);
+// //     var ca = decodedCookie.split(';');
+// //     for(var i = 0; i <ca.length; i++) {
+// //         var c = ca[i];
+// //         while (c.charAt(0) == ' ') {
+// //             c = c.substring(1);
+// //         }
+// //         if (c.indexOf(name) == 0) {
+// //             return c.substring(name.length, c.length);
+// //         }
+// //     }
+// //     return "";
+// // }
+
+// function checkCookies(){
+//     var userName = $.cookie($('#rUserName').val());
+//     if(userName !== undefined){
+//         alert("account with this username already exists");
+//     }
+//     else{
+//         saveCookies();
+//     }
+// }
+
+document.getElementById("saveCookies").addEventListener('click', checkCookie);
+
+function createCookies(evt){
+    evt.preventDefault();
+
+    setCookie('username', document.getElementById('rUserName').value);
+    setCookie('password', document.getElementById('rPassword').value);
+    setCookie('first', document.getElementById('rFirst').value);
+    setCookie('last', document.getElementById('rLast').value);
+    setCookie('email', document.getElementById('rEmail').value);
+    setCookie('dob', document.getElementById('dob').value);
+    setCookie('profile', document.getElementById('proPic').value);
+    setCookie('address', document.getElementById('address').value);
 }
 
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("email");
+    if (user != "") {
+        alert("there is already an account associated with that email");
+    } else {
+        createCookies();
+    }
+}
