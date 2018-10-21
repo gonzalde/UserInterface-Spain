@@ -55,14 +55,14 @@ function removePreference(idTag) {
 function checkPreferences() {
     for (var i = 0; i < prefCounter; ++i) {
         var text = $("#pref_" + i).text();
-        if (text == "Add Preference") {
+        if (text == "Add Preference" || text == '') {
             return false;
         }
     }
     return true;
 }
 
-// Restraunt info keyed keyed by number.
+// Restraunt info keyed  by number.
 var restrauntInfo = [
     {
         name: 'Gino\'s',

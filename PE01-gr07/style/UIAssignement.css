@@ -255,6 +255,8 @@ li a:hover {
     position: fixed;
     left: 0;
     bottom: 0;
+    height: 3.5%;
+    padding-top: 0.5%;
     width: 100%;
     background-color: whitesmoke;
     text-align: center;

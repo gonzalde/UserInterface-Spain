@@ -12,145 +12,146 @@
 
     </head>
     <body>
-            <div id ="body">
-
-        <div class="col-12 header-navbar">
-            <img class="logo" src="images/logo.png" alt="logo">
-            <h2><a style="color:white" href="UIAssignment2.html">The
-                    Restraunteur</a></h2>
-            <ul class="navbar-links">
-                <li><a onclick="personalInfo()">Personal</a></li>
-                <li><a onclick="getOpinions()">Opinions</a></li>
-                <li><a href="#">Preferences</a></li>
-                <li onclick="restart()" id = "logOut" style = "margin-left: 500px" ><a>Log Out</a></li>
-            </ul>
-        </div>
-
-        <div class="tablet-navbar">
-            <ul class="col-12 tablet-navbar-links">
-                <li><a onclick="personalInfo()"">Personal</a></li>
-                <li><a onclick="getOpinions()">Opinions</a></li>
-                <li><a href="#">Preferences</a></li>
-            </ul>
-        </div>
-
-        <div class="row">
-
-            <!-- Side Panel Information: Web -->
-            <div class="column1">
-                <img class="headshot" src="images/headshot.png" alt="">
-                <h2 style="display: inline">Thomas Kaizer</h2>
-                <h3><a style="margin-left:0px" onclick="personalInfo()">Personal
-                        Information</a></h3>
-                <p>Thomas Kaizer is from Westchester, New York, and is a student
-                    at the University of Rochester. He is currently studying
-                    abroad in Madrid.</p>
-
-                <hr>
-
-                <h3><a onclick="getOpinions()" style="margin-left:
-                        0px">Last Opinions</a></h3>
-                <a id="912759211" onclick="getPopupInformation(id)">Ginos</a>
-                <p>Gino's is great for family</p>
-                <a id="915336932" onclick="getPopupInformation(id)">Alcaravea</a>
-                <p>I had an amazing dinner.</p>
-
-                <hr>
-
-                <h3>Preferences <i class="fa fa-plus" id = "editButton" onclick="addPreference()"></i></h3>
-                <div class="pref-list"></div>
+        <div id ="body">
+            <!-- Web Navigation -->
+            <div class="col-12 header-navbar">
+                <img class="logo" src="images/logo.png" alt="logo">
+                <h2><a style="color:white" href="UIAssignment2.html">The
+                        Restraunteur</a></h2>
+                <ul class="navbar-links">
+                    <li><a onclick="personalInfo()">Personal</a></li>
+                    <li><a onclick="getOpinions()">Opinions</a></li>
+                    <li><a href="#">Preferences</a></li>
+                    <li onclick="restart()" id = "logOut" style = "margin-left: 500px" ><a>Log Out</a></li>
+                </ul>
             </div>
 
-            <div class="column2" id="blank-column">
-                <p></p>
+            <!-- Mobile Navigation -->
+            <div class="tablet-navbar">
+                <ul class="col-12 tablet-navbar-links">
+                    <li><a onclick="personalInfo()"">Personal</a></li>
+                    <li><a onclick="getOpinions()">Opinions</a></li>
+                    <li><a href="#">Preferences</a></li>
+                </ul>
             </div>
 
-             <!-- Side Panel Information: Mobile -->
-            <div class="mobile-username-group">
+            <!-- Main Content -->
+            <div class="row">
+                <!-- Side Panel Information: Web -->
+                <div class="column1">
                     <img class="headshot" src="images/headshot.png" alt="">
                     <h2 style="display: inline">Thomas Kaizer</h2>
+                    <h3><a style="margin-left:0px" onclick="personalInfo()">Personal
+                            Information</a></h3>
+                    <p>Thomas Kaizer is from Westchester, New York, and is a student
+                        at the University of Rochester. He is currently studying
+                        abroad in Madrid.</p>
+
+                    <hr>
+
+                    <h3><a onclick="getOpinions()" style="margin-left:
+                            0px">Last Opinions</a></h3>
+                    <a id="912759211" onclick="getPopupInformation(id)">Ginos</a>
+                    <p>Gino's is great for family</p>
+                    <a id="915336932" onclick="getPopupInformation(id)">Alcaravea</a>
+                    <p>I had an amazing dinner.</p>
+
+                    <hr>
+
+                    <h3>Preferences <i class="fa fa-plus" id = "editButton" onclick="addPreference()"></i></h3>
+                    <div class="pref-list"></div>
                 </div>
 
-            <!-- Personal Information Window -->
-            <div class="column2" id ="personal-info" style="display:none">
-                <h2>Personal Information</h2>
-                <input class="col-4" type="text" placeholder="Name">
-                <input style="display:inline" class="col-4" type="text"
-                    placeholder="Surname">
-                <input style="width: 70.5%" class="col-9" type="text"
-                    placeholder="email">
-                <input class="col-4" type="text" placeholder="address">
-                <input style="display:inline" class="col-4" type="text"
-                    placeholder="mobile phone">
-                <input style="width: 70.5%" class="col-9" type="text"
-                    placeholder="birthday">
+                <div class="column2" id="blank-column">
+                    <p></p>
+                </div>
 
-                <br>
-                <h2>My Activity in this App</h2>
-                <div class="circles">
-                    <button class="circle" style="font-size: 16pt">X Points</button>
-                    <button class="circle" style="font-size: 16pt">2 Level</button>
-                    <button class="circle" style="font-size: 16pt">3 Opinions</button>
-                    <button class="circle" style="font-size: 16pt">5 Photos</button>
+                <!-- Side Panel Information: Mobile -->
+                <div class="mobile-username-group">
+                        <img class="headshot" src="images/headshot.png" alt="">
+                        <h2 style="display: inline">Thomas Kaizer</h2>
+                </div>
+
+                <!-- Personal Information Window -->
+                <div class="column2" id ="personal-info" style="display:none">
+                    <h2>Personal Information</h2>
+                    <input class="col-4" type="text" placeholder="Name">
+                    <input style="display:inline" class="col-4" type="text"
+                        placeholder="Surname">
+                    <input style="width: 70.5%" class="col-9" type="text"
+                        placeholder="email">
+                    <input class="col-4" type="text" placeholder="address">
+                    <input style="display:inline" class="col-4" type="text"
+                        placeholder="mobile phone">
+                    <input style="width: 70.5%" class="col-9" type="text"
+                        placeholder="birthday">
+
+                    <br>
+                    <h2>My Activity in this App</h2>
+                    <div class="circles">
+                        <button class="circle" style="font-size: 16pt">X Points</button>
+                        <button class="circle" style="font-size: 16pt">2 Level</button>
+                        <button class="circle" style="font-size: 16pt">3 Opinions</button>
+                        <button class="circle" style="font-size: 16pt">5 Photos</button>
+                    </div>
+                </div>
+
+                <!-- Opinion List Window -->
+                <div class="column2" id="opinion-list" style="display:none">
+                    <h2>Last Opinions</h2>
+                    <div class="opinion">
+                        <ul class="opinon-content">
+                            <li> <img style="margin-top: 30px"
+                                class="opinion-logo col-7" src="images/ginos-logo.png"
+                                alt="Gino's">
+                            </li>
+                            <li>
+                            <h3 id="912759211" onclick="getPopupInformation(id)">Gino's</h3>
+                            <h4>Madrid, Spain</h4>
+                            <h4>19, September, 2018</h4>
+                            </li>
+                        </ul>
+                        <p class="opinion-desc">Gino's is great for family dinners, they have
+                            an amazing 2 for 1
+                            deal from Sunday to Thursday. The pizza's are thin and crispy
+                            perfect for anyone.</p>
+                    </div>
+                    <div class="opinion">
+                        <ul class="opinon-content">
+                            <li> <img class="opinion-logo col-8" src="images/alcaravea-logo.png"
+                                alt="Alcaravea">
+                            </li>
+                            <li>
+                            <h3 id="915336932" onclick="getPopupInformation(id)">Alcaravea</h3>
+                            <h4>Madrid, Spain</h4>
+                            <h4>10, September, 2018</h4>
+                            </li>
+                        </ul>
+                        <p class="opinion-desc">I had an amazing dinner there with 3 friends.
+                            The dinner menu had
+                            several
+                            options, all of which were well priced and decent portion size. I
+                            went to the one in Chamberi, it had a nice atmosphere that felt like
+                            home. Recommended for anyone who wants to enjoy a great time.</p>
+                    </div>
                 </div>
             </div>
 
-        <!-- Opinion List Window -->
-        <div class="column2" id="opinion-list" style="display:none">
-                <h2>Last Opinions</h2>
-                <div class="opinion">
-                  <ul class="opinon-content">
-                    <li> <img style="margin-top: 30px"
-                        class="opinion-logo col-7" src="images/ginos-logo.png"
-                        alt="Gino's">
-                    </li>
-                    <li>
-                      <h3 id="912759211" onclick="getPopupInformation(id)">Gino's</h3>
-                      <h4>Madrid, Spain</h4>
-                      <h4>19, September, 2018</h4>
-                    </li>
-                  </ul>
-                  <p class="opinion-desc">Gino's is great for family dinners, they have
-                    an amazing 2 for 1
-                    deal from Sunday to Thursday. The pizza's are thin and crispy
-                    perfect for anyone.</p>
+            <!-- Popup for opinions -->
+            <div class="opinion-popup">
+                <!-- Opinon content -->
+                <div class="opinion-popup-content">
                 </div>
-                <div class="opinion">
-                  <ul class="opinon-content">
-                    <li> <img class="opinion-logo col-8" src="images/alcaravea-logo.png"
-                        alt="Alcaravea">
-                    </li>
-                    <li>
-                      <h3 id="915336932" onclick="getPopupInformation(id)">Alcaravea</h3>
-                      <h4>Madrid, Spain</h4>
-                      <h4>10, September, 2018</h4>
-                    </li>
-                  </ul>
-                  <p class="opinion-desc">I had an amazing dinner there with 3 friends.
-                    The dinner menu had
-                    several
-                    options, all of which were well priced and decent portion size. I
-                    went to the one in Chamberi, it had a nice atmosphere that felt like
-                    home. Recommended for anyone who wants to enjoy a great time.</p>
-                </div>
-              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="http://www.google.com"><i class="fa fa-google"></i></a>
+                    <a href="http://www.wikipedia.com"><i class="fa fa-wikipedia-w"></i></a>
             </div>
         </div>
 
-        <!-- Popup for opinions -->
-        <div class="opinion-popup">
-            <!-- Opinon content -->
-            <div class="opinion-popup-content">
-            </div>
-        </div>
-
-        </div>
-        <div class="footer">
-            <a href="http://www.facebook.com">facebook</a>
-            <a href="http://www.google.com">google</a>
-            <a href="http://www.wikipedia.com">wikipedia</a>
-        </div>
-    </div>
         <!-- Login Information -->
         <div id = "entrance" class = "hidden">
             <h1 class = "titleHead">The Restraunteur<img class="logo" src="images/logo.png" alt="logo"></h1>
@@ -186,8 +187,6 @@
                     <button class = "signInButton">Delete</button>
             </form>
         </div>
-
     </body>
     <script src="js/UIAssignment2.js"></script>
-
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>The Restraunteur</title>
+        <link rel="stylesheet" href="style/UIAssignement.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    </head>
+    <body>
+        <!-- Homepage Content -->
+        <div id ="body">
+            <!-- Homepage Navigation -->
+            <div class="col-12 header-navbar">
+                <img class="logo" src="images/logo.png" alt="logo">
+                <h2><a style="color:white" href="UIAssignment2_home.html">The
+                        Restraunteur</a></h2>
+                <ul class="navbar-links">
+                    <li onclick="restart()" id = "logOut" style = "margin-left: 500px" ><a>Log In</a></li>
+                    <li onclick="restart(); register()" id = "signInButton" style = "margin-left: 5px" ><a>Register</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="row">
+                <!-- Side Panel: Search -->
+                <div class="column1">
+                </div>
+
+                <!-- Image Carousel Window -->
+                <div class="column2" id ="image-carousel" style="display:none">    
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="http://www.google.com"><i class="fa fa-google"></i></a>
+                    <a href="http://www.wikipedia.com"><i class="fa fa-wikipedia-w"></i></a>
+            </div>
+        </div>
+
+        <!-- Login Information -->
+        <div id = "entrance" class = "hidden">
+            <h1 class = "titleHead">The Restraunteur<img class="logo" src="images/logo.png" alt="logo"></h1>
+
+            <form id = "logIn">
+                <input type="text" name = "email"placeholder="email" style = "width: 20%">
+                <br>
+                <input type="password" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
+                <br>
+                <br>
+                <button onclick = "printContent()" id = "logInButton" type = "submit" class = "signInButton">Log In</button>
+                <button onclick = "register()" class = "signInButton">Register</button>
+            </form>
+
+            <form id = "Register" class = "hidden">
+                    <input id = "rUserName" type="text" placeholder="User Name" style = "width: 20%" required>
+                    <br>
+                    <input id = "rPassword"type="password" maxlength="8" pattern="[a-zA-Z0-9]{0,8}" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
+                    <br>
+                    <input id = "rFirst" type="text" placeholder="First Name" style = "width: 20%" required>
+                    <br>
+                    <input id = "rLast" type="text" placeholder="Last Name" style = "width: 20%" required>
+                    <br>
+                    <input id = "rEmail" type="text" name = "email"placeholder="email" style = "width: 20%" required>
+                    <br>
+                    <input id = "dob" type = "date" style = "width: 20%" required>
+                    <br>
+                    <input id = "proPic" type="file" name="pic" accept="image/*">
+                    <br>
+                    <input id = "address" type="text" name="address" placeholder="Address" style = "width: 20%" required>
+                    <br>
+                    <button class = "signInButton" id = "saveCookies">Save</button>
+                    <button class = "signInButton">Delete</button>
+            </form>
+        </div>
+    </body>
+    <script src="js/UIAssignment2.js"></script>
+</html>
