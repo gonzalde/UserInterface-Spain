@@ -371,3 +371,17 @@ button:focus{
     vertical-align: middle;
     overflow: hidden;
 }
+
+.rSocial {
+    margin-top: 40px;
+    float: left;
+    width: 80%;
+}
+
+.rInfo{
+    float: left;
+    width: 80%;
+}
+.rIcon{
+    margin-right: 20px;
+}

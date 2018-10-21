@@ -98,8 +98,8 @@ function getPopupInformation(restrauntId) {
     var r = restrauntInfo.filter(r => r.number == restrauntId)[0];
     var rClass = "popup-" + restrauntId;
     var rHide = "hidePopupInformation(\"" + rClass + "\")";
-    $(".opinion-popup-content").append("<i class=\"" + rClass + " fa fa-times\" onclick=" + rHide + "></i>");
-    $(".opinion-popup-content").append("<ul class=\"" + rClass + "\" id=\"rContent\"></ul>");
+    $(".opinion-popup-content").append("<i style=\"width:80%\" class=\"" + rClass + " fa fa-times\" onclick=" + rHide + "></i>");
+    $(".opinion-popup-content").append("<div class=\"rInfo "+rClass+"\"><ul class=\"" + rClass + "\" id=\"rContent\"></ul><div>");
     // Add image
     $("#rContent").append("<li> <img class=\"opinion-logo col-8\" src=\"" + r.image + "\" alt=\"" + r.name + "\"></li>");
     // Add Information
@@ -107,7 +107,9 @@ function getPopupInformation(restrauntId) {
     $(".opinion-popup-content").append("<li class=\"" + rClass + "\" >" + r.description + "</li>");
     $(".opinion-popup-content").append("<li class=\"" + rClass + "\" ></li>");
     $(".opinion-popup-content").append("<li class=\"" + rClass + "\" ><h4>Review: </h4><p>" + r.review + "</p></li>");
-
+    $(".opinion-popup-content").append("<div class=\"" + rClass + " rSocial\" >"+
+    "<a  href=\""+r.facebook+"\"><i class=\"" + rClass + " rIcon fa fa-facebook\"></i></a>"+
+    "<a href=\""+r.twitter+"\"><i class=\"" + rClass + " rIcon fa fa-twitter\"></i></a></div>");
     // Remove bullet points
     $("#rContent").css("list-style-type", "none");
     $(".opinion-popup").show();
