@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-
+        <script src="js/UIAssignment2.js"></script>
     </head>
     <body>
         <div id ="body">
@@ -29,7 +29,7 @@
             <!-- Mobile Navigation -->
             <div class="tablet-navbar">
                 <ul class="col-12 tablet-navbar-links">
-                    <li><a onclick="personalInfo()"">Personal</a></li>
+                    <li><a onclick="personalInfo()">Personal</a></li>
                     <li><a onclick="getOpinions()">Opinions</a></li>
                     <li><a href="#">Preferences</a></li>
                 </ul>
@@ -51,9 +51,9 @@
 
                     <h3><a onclick="getOpinions()" style="margin-left:
                             0px">Last Opinions</a></h3>
-                    <a id="912759211" onclick="getPopupInformation(id)">Ginos</a>
+                    <a id="s912759211" onclick="getPopupInformation(id)">Ginos</a>
                     <p>Gino's is great for family</p>
-                    <a id="915336932" onclick="getPopupInformation(id)">Alcaravea</a>
+                    <a id="s915336932" onclick="getPopupInformation(id)">Alcaravea</a>
                     <p>I had an amazing dinner.</p>
 
                     <hr>
@@ -106,7 +106,7 @@
                                 alt="Gino's">
                             </li>
                             <li>
-                            <h3 id="912759211" onclick="getPopupInformation(id)">Gino's</h3>
+                            <h3 id="c912759211" onclick="getPopupInformation(id)">Gino's</h3>
                             <h4>Madrid, Spain</h4>
                             <h4>19, September, 2018</h4>
                             </li>
@@ -122,7 +122,7 @@
                                 alt="Alcaravea">
                             </li>
                             <li>
-                            <h3 id="915336932" onclick="getPopupInformation(id)">Alcaravea</h3>
+                            <h3 id="c915336932" onclick="getPopupInformation(id)">Alcaravea</h3>
                             <h4>Madrid, Spain</h4>
                             <h4>10, September, 2018</h4>
                             </li>
@@ -157,7 +157,7 @@
             <h1 class = "titleHead">The Restraunteur<img class="logo" src="images/logo.png" alt="logo"></h1>
 
             <form id = "logIn">
-                <input type="text" name = "email"placeholder="email" style = "width: 20%">
+                <input type="text" name = "email" placeholder="email" style = "width: 20%">
                 <br>
                 <input type="password" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
                 <br>
@@ -169,13 +169,13 @@
             <form id = "Register" class = "hidden">
                     <input id = "rUserName" type="text" placeholder="User Name" style = "width: 20%" required>
                     <br>
-                    <input id = "rPassword"type="password" maxlength="8" pattern="[a-zA-Z0-9]{0,8}" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
+                    <input id = "rPassword" type="password" maxlength="8" pattern="[a-zA-Z0-9]{0,8}" title="maximum 8 characters, only alphanumeric" placeholder="Password" style = "width: 20%" required>
                     <br>
                     <input id = "rFirst" type="text" placeholder="First Name" style = "width: 20%" required>
                     <br>
                     <input id = "rLast" type="text" placeholder="Last Name" style = "width: 20%" required>
                     <br>
-                    <input id = "rEmail" type="text" name = "email"placeholder="email" style = "width: 20%" required>
+                    <input id = "rEmail" type="text" name = "email" placeholder="email" style = "width: 20%" required>
                     <br>
                     <input id = "dob" type = "date" style = "width: 20%" required>
                     <br>
@@ -188,5 +188,4 @@
             </form>
         </div>
     </body>
-    <script src="js/UIAssignment2.js"></script>
 </html>

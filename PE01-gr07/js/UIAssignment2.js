@@ -95,8 +95,9 @@ var restrauntInfo = [
     }];
 
 function getPopupInformation(restrauntId) {
-    var r = restrauntInfo.filter(r => r.number == restrauntId)[0];
-    var rClass = "popup-" + restrauntId;
+    var rId = restrauntId.substring(1);
+    var r = restrauntInfo.filter(r => r.number == rId)[0];
+    var rClass = "popup-" + rId;
     var rHide = "hidePopupInformation(\"" + rClass + "\")";
     $(".opinion-popup-content").append("<i style=\"width:80%\" class=\"" + rClass + " fa fa-times\" onclick=" + rHide + "></i>");
     $(".opinion-popup-content").append("<div class=\"rInfo "+rClass+"\"><ul class=\"" + rClass + "\" id=\"rContent\"></ul><div>");
