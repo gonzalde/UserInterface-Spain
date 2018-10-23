@@ -20,7 +20,7 @@
                 <h2><a style="color:white" href="UIAssignment2_home.html">The
                         Restraunteur</a></h2>
                 <ul class="navbar-links">
-                    <li onclick="restart()" id = "logOut" style = "margin-left: 500px" ><a>Log In</a></li>
+                    <li onclick="restart()" id = "logOut" style = "margin-left: 750px" ><a>Log In</a></li>
                     <li onclick="restart(); register()" id = "signInButton" style = "margin-left: 5px" ><a>Register</a></li>
                 </ul>
             </div>
@@ -29,10 +29,39 @@
             <div class="row">
                 <!-- Side Panel: Search -->
                 <div class="column1">
+                        <h2 style="margin-left: 20px">Search</h2>
+                    <div>
+                        <select>
+                            <option value="hotel">Hotel</option>
+                            <option value="restraunt">Restraunt</option>
+                            <option value="flight">Flight</option>
+                        </select>
+                        <select>
+                            <option value="$-$$">$-$$</option>
+                            <option value="$$-$$$">$$-$$$</option>
+                            <option value="$$$-$$$$">$$$-$$$$</option>
+                            <option value="$$$$+">$$$$+</option>
+                        </select>
+                        <select>
+                            <option value="1km">&lt 1 km</option>
+                            <option value="2.5km">&lt 2.5 km</option>
+                            <option value="5km">&lt 5 km</option>
+                            <option value="5+km">5km+</option>
+                        </select>
+                    </div>
+                    <div class="searchboxes">
+                        <form class="searchform">
+                            <input type="text" placeholder="Try &#8220 Italian &#8221" name="srch">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" placeholder="Try &#8220 NYC &#8221" name="srch">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
                 </div>
 
                 <!-- Image Carousel Window -->
-                <div class="column2" id ="image-carousel" style="display:none">    
+                <div class="column2" id="blank-column">
+                        <p></p>
                 </div>
             </div>
 
