@@ -23,6 +23,13 @@ function getOpinions() {
 
 // Performs log out.
 function restart() {
+    var content = document.getElementById("User-body");
+    content.classList.add("hidden");
+    document.getElementById("entrance").classList.remove("hidden");
+}
+
+//moves from home page to login
+function begin() {
     var content = document.getElementById("body");
     content.classList.add("hidden");
     document.getElementById("entrance").classList.remove("hidden");
@@ -33,6 +40,8 @@ function register() {
     document.getElementById("logIn").classList.add("hidden");
     document.getElementById("Register").classList.remove("hidden");
 }
+
+
 
 // Handles the preferences
 var prefCounter = 0;
@@ -122,19 +131,29 @@ function hidePopupInformation(restrauntId) {
 
 }
 
-document.getElementById("saveCookies").addEventListener('click', checkCookie);
+document.getElementById("storeCookies").addEventListener('click', createCookies);
 
 function createCookies(evt) {
     evt.preventDefault();
 
-    setCookie('username', document.getElementById('rUserName').value);
-    setCookie('password', document.getElementById('rPassword').value);
-    setCookie('first', document.getElementById('rFirst').value);
-    setCookie('last', document.getElementById('rLast').value);
-    setCookie('email', document.getElementById('rEmail').value);
-    setCookie('dob', document.getElementById('dob').value);
-    setCookie('profile', document.getElementById('proPic').value);
-    setCookie('address', document.getElementById('address').value);
+    if(checkCookie()){
+        var user = {
+            'email': document.getElementById('rEmail').value,
+            'username' : document.getElementById('rUserName').value,
+            'password' : document.getElementById('rPassword').value,
+            'first': document.getElementById('rFirst').value,
+            'last': document.getElementById('rLast').value,
+            'dob': document.getElementById('dob').value,
+            'profile': document.getElementById('proPic').value,
+            'address': document.getElementById('address').value,
+            'phone': ""
+        }
+        setCookie(document.getElementById('rEmail').value, JSON.stringify(user));
+        logIn(document.getElementById('rEmail').value);
+    }
+    else{
+        restart();
+    }
 }
 
 
@@ -157,10 +176,61 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var user = getCookie("email");
+    var user = getCookie(document.getElementById('rEmail').value);
     if (user != "") {
         alert("there is already an account associated with that email");
+        return false;
     } else {
-        createCookies();
+        return true;
+    }
+}
+
+//attaches cookie info to what is displayed
+function logIn(email){
+    var userInfo = JSON.parse(getCookie(email));
+    $('.headshot').attr("src", userInfo["profile"]);
+    document.getElementById("userTitle").innerHTML = userInfo["first"] + " "+ userInfo["last"];
+    document.getElementById("pEmail").innerHTML = userInfo["email"];
+    document.getElementById("pAddress").innerHTML = userInfo["address"];
+    document.getElementById("pPhone").innerHTML = userInfo["phone"];
+    document.getElementById("pDOB").innerHTML = userInfo["dob"];
+    document.getElementById("entrance").classList.add("hidden");
+    document.getElementById("Register").classList.add("hidden");
+    document.getElementById("logIn").classList.remove("hidden");
+    document.getElementById("User-body").classList.remove("hidden");
+}
+
+//checks email agains password associated with cookie
+function validate(){
+    var loginText = document.getElementById('logEmail').value
+    var user = getCookie(loginText);
+    if(user!=""){
+        userInfo = JSON.parse(user);
+        if($('#logPassword').val()== userInfo["password"]){
+            logIn(document.getElementById('logEmail').value);
+        }else{
+            alert("incorrect password");
+            begin();
+        }
+    }else{
+        alert("no user associated with this email");
+    }
+}
+
+//checks if there is a query in the url
+function checkForQuery(){
+var field = 'q';
+var url = window.location.href;
+if(url.includes('?')){
+    return true;
+}
+return false
+}
+
+//decides what to load based on if there is a query
+function whatToLoad(){
+    if(checkForQuery()){
+        document.getElementById("body").classList.add("hidden");
+        document.getElementById("User-body").classList.remove("hidden");
     }
 }
