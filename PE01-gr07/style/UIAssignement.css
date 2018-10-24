@@ -411,3 +411,8 @@ button:focus{
   .searchboxes button:hover {
     background:teal;
   }
+  
+  .image_carousel{
+      height: 600px;
+      width: 80%;
+  }
